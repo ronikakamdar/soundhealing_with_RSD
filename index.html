@@ -18,6 +18,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sessions">Sessions</a></li>
                 <li><a href="#frequencies">Frequencies</a></li>
+                <li><a href="#booking">Book Session</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
@@ -33,23 +34,27 @@
                 <h2>Healing Sessions</h2>
                 <div class="session-grid">
                     <div class="session-card">
-                        <h3>Meditation</h3>
+                        <h3>🧘 Meditation</h3>
                         <p>Guided meditation with calming soundscapes</p>
+                        <small>Duration: 30-60 min</small>
                         <button class="btn btn-secondary">Play</button>
                     </div>
                     <div class="session-card">
-                        <h3>Sleep & Relaxation</h3>
+                        <h3>😴 Sleep & Relaxation</h3>
                         <p>Deep sleep assistance with soothing frequencies</p>
+                        <small>Duration: 45-90 min</small>
                         <button class="btn btn-secondary">Play</button>
                     </div>
                     <div class="session-card">
-                        <h3>Focus & Energy</h3>
+                        <h3>🎯 Focus & Energy</h3>
                         <p>Binaural beats to enhance concentration</p>
+                        <small>Duration: 20-45 min</small>
                         <button class="btn btn-secondary">Play</button>
                     </div>
                     <div class="session-card">
-                        <h3>Chakra Balancing</h3>
+                        <h3>✨ Chakra Balancing</h3>
                         <p>Align your energy with chakra frequencies</p>
+                        <small>Duration: 60-90 min</small>
                         <button class="btn btn-secondary">Play</button>
                     </div>
                 </div>
@@ -73,9 +78,142 @@
                 </div>
             </section>
 
+            <!-- Book Session Section -->
+            <section id="booking" class="booking">
+                <h2>Book Your Personal Session</h2>
+                <p class="booking-intro">Reserve your one-on-one sound healing session with our experienced practitioners</p>
+                
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-grid">
+                        <!-- Personal Information -->
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <!-- Session Selection -->
+                        <div class="form-group full-width">
+                            <label for="sessionType">Select Session Type *</label>
+                            <select id="sessionType" name="sessionType" required>
+                                <option value="">-- Choose a session --</option>
+                                <option value="meditation">🧘 Meditation (30-60 min)</option>
+                                <option value="sleep">😴 Sleep & Relaxation (45-90 min)</option>
+                                <option value="focus">🎯 Focus & Energy (20-45 min)</option>
+                                <option value="chakra">✨ Chakra Balancing (60-90 min)</option>
+                            </select>
+                        </div>
+
+                        <!-- Date and Time -->
+                        <div class="form-group">
+                            <label for="sessionDate">Preferred Date *</label>
+                            <input type="date" id="sessionDate" name="sessionDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sessionTime">Preferred Time *</label>
+                            <select id="sessionTime" name="sessionTime" required>
+                                <option value="">-- Choose time --</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                            </select>
+                        </div>
+
+                        <!-- Session Duration -->
+                        <div class="form-group">
+                            <label for="duration">Session Duration *</label>
+                            <select id="duration" name="duration" required>
+                                <option value="">-- Choose duration --</option>
+                                <option value="30">30 Minutes - $49</option>
+                                <option value="45">45 Minutes - $69</option>
+                                <option value="60">60 Minutes - $89</option>
+                                <option value="90">90 Minutes - $129</option>
+                            </select>
+                        </div>
+
+                        <!-- Practitioner Selection -->
+                        <div class="form-group">
+                            <label for="practitioner">Preferred Practitioner</label>
+                            <select id="practitioner" name="practitioner">
+                                <option value="">-- Any available --</option>
+                                <option value="sarah">Sarah Mitchell (Experienced)</option>
+                                <option value="james">James Chen (Certified)</option>
+                                <option value="maya">Maya Patel (Specialist)</option>
+                            </select>
+                        </div>
+
+                        <!-- Special Requests -->
+                        <div class="form-group full-width">
+                            <label for="specialRequests">Special Requests or Health Conditions</label>
+                            <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Tell us about any specific needs or health conditions..."></textarea>
+                        </div>
+
+                        <!-- Frequency Preference -->
+                        <div class="form-group full-width">
+                            <label>Healing Frequency Preference</label>
+                            <div class="frequency-checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="frequency" value="432">
+                                    432 Hz (Relaxation)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="frequency" value="528">
+                                    528 Hz (Transformation)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="frequency" value="639">
+                                    639 Hz (Connection)
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Price Summary -->
+                        <div class="form-group full-width">
+                            <div class="price-summary">
+                                <span>Total Price:</span>
+                                <span id="priceDisplay" class="price-amount">$0</span>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions -->
+                        <div class="form-group full-width">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                I agree to the terms and conditions
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-submit">Book Session</button>
+                            <button type="reset" class="btn btn-reset">Clear Form</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Booking Confirmation Message -->
+                <div id="bookingMessage" class="booking-message" style="display: none;"></div>
+            </section>
+
             <section id="about" class="about">
                 <h2>About Sound Healing</h2>
                 <p>Sound healing is an ancient practice that uses the power of sound vibrations to promote physical, emotional, and spiritual wellness. Our collection features scientifically-backed audio frequencies designed to support your journey toward better health and well-being.</p>
+                <p>Our certified practitioners are dedicated to providing personalized sessions tailored to your unique needs and wellness goals.</p>
             </section>
         </main>
 
