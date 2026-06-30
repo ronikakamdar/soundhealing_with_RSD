@@ -1,2 +1,2 @@
 # soundhealing_with_RSD
-sound healing personal or couple session
+A serene web application dedicated to sound healing and therapeutic audio experiences
